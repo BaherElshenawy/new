@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="robots" content="noindex, nofollow"/>
+    <meta name="theme-color" content="#00D4AA"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>"/>
+    <title id="pg-title">نظام إدارة عيادة الأسنان</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div id="app-container">
+        <aside id="sidebar" class="hidden">
+            <div class="logo">
+                <span class="brand-icon">🦷</span>
+                <span class="brand-text">لوحة التحكم</span>
+            </div>
+            
+            <nav style="display: flex; flex-direction: column; gap: 0.5rem; flex-grow: 1;">
+                <button class="nav-btn active" data-target="dashboard">
+                    <i data-lucide="layout-dashboard"></i> <span>الرئيسية</span>
+                </button>
+                <button class="nav-btn" data-target="appointments">
+                    <i data-lucide="calendar"></i> <span>المواعيد</span>
+                </button>
+                <button class="nav-btn" data-target="patients">
+                    <i data-lucide="users"></i> <span>المرضى</span>
+                </button>
+                <button class="nav-btn" data-target="admin">
+                    <i data-lucide="shield-alert"></i> <span>النظام (Root)</span>
+                </button>
+            </nav>
+            
+            <div style="margin-top: auto;">
+                <button id="logout-btn" class="btn-primary btn-danger" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem;">
+                    <i data-lucide="log-out"></i> <span>تسجيل الخروج</span>
+                </button>
+            </div>
+        </aside>
+
+        <main id="view-layer" style="flex-grow: 1; padding: 2rem; overflow-y: auto;">
+            <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                <p style="color: var(--text-secondary); font-family: 'Cairo', sans-serif;">جاري الاتصال بقاعدة البيانات المشفرة...</p>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
